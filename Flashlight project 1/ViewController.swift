@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var isOn: Bool = true
+    @IBOutlet weak var onlyButton: UIButton!
+    @IBAction func onoffButtonPressed(_ sender: Any) {
+        isOn = !isOn
+        
+        if isOn {
+            view.backgroundColor = UIColor.blue
+            
+            
+        } else {
+            view.backgroundColor = UIColor.orange
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
